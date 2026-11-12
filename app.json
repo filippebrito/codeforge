@@ -33,7 +33,8 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      "@react-native-vector-icons/fontawesome6"
     ],
     "experiments": {
       "typedRoutes": true
