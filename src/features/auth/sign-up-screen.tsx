@@ -52,7 +52,7 @@ export function SignupScreen() {
 
     try {
       await login(result.data);
-      router.replace("/(tabs)");
+      router.replace("/(tabs)/dashboard");
     } finally {
       isSubmittingRef.current = false;
       setIsSubmitting(false);

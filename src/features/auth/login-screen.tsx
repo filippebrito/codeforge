@@ -1,4 +1,3 @@
-import { FontAwesome6 } from "@react-native-vector-icons/fontawesome6";
 import { useRef, useState } from "react";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
@@ -46,7 +45,7 @@ export function LoginScreen() {
 
     try {
       await login(result.data);
-      router.replace("/(tabs)");
+      router.replace("/(tabs)/dashboard");
     } finally {
       isSubmittingRef.current = false;
       setIsSubmitting(false);
