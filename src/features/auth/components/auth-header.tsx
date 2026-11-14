@@ -5,8 +5,8 @@ export function AuthHeader() {
     return (
       <View className="mb-6 items-center">
         <View className="mb-4 h-14 w-14 items-center justify-center rounded-2xl bg-primary">
-        <FontAwesome6 name="terminal" iconStyle="solid" size={22} color="#ffffff" />
-      </View>
+          <FontAwesome6 name="terminal" iconStyle="solid" size={22} color="#ffffff" />
+        </View>
 
         <View className="mb-2">
           <Text className="text-3xl font-bold text-on-surface">
