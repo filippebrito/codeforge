@@ -1,6 +1,7 @@
 import { useState, type ComponentProps } from "react";
 import { Pressable, Text, TextInput, View } from "react-native";
 import { FontAwesome6 } from "@react-native-vector-icons/fontawesome6";
+import { AppText } from "../app-text/app-text";
 
 type IconName = Extract<
   ComponentProps<typeof FontAwesome6>,
@@ -41,12 +42,12 @@ export function TextField({
   return (
     <View>
       <View className="mb-2 flex-row items-center justify-between">
-        <Text className="text-sm font-medium text-on-surface">{label}</Text>
+        <AppText variant="label">{label}</AppText>
         {labelAction ? (
           <Pressable onPress={labelAction.onPress}>
-            <Text className="text-sm font-medium text-primary">
+            <AppText variant="label" className="text-primary">
               {labelAction.label}
-            </Text>
+            </AppText>
           </Pressable>
         ) : null}
       </View>
@@ -80,7 +81,7 @@ export function TextField({
         ) : null}
       </View>
 
-        {error ? ( <Text className="mt-1 text-xs text-red-500">{error}</Text> ) : null}
+        {error ? ( <AppText variant="error">{error}</AppText> ) : null}
     </View>
   );
 }
