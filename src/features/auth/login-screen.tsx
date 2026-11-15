@@ -9,6 +9,7 @@ import { router } from "expo-router";
 import { login } from "@/features/auth/auth-service";
 import { AuthHeader } from "./components/auth-header";
 import { AuthOthers } from "./components/auth-others";
+import { Screen } from "@/shared/components/ui/screen/screen";
 
 export function LoginScreen() {
 
@@ -53,10 +54,7 @@ export function LoginScreen() {
   }
 
   return (
-    <View 
-      className="flex-1 bg-surface"
-      style={{ paddingTop: insets.top, paddingBottom: insets.bottom }}>
-      <StatusBar style="dark" />
+    <Screen edges={["top", "bottom"]}>
 
       <ScrollView
           className="flex-1"
@@ -134,6 +132,6 @@ export function LoginScreen() {
         </Text>
       </ScrollView>
 
-    </View>
+    </Screen>
   );
 }

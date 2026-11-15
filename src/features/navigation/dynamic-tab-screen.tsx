@@ -33,12 +33,12 @@ export function renderTabScreen(tab: TabMenuItem) {
                 }}
             >
                 <View className="h-10 w-10 items-center justify-center rounded-2xl bg-primary">
-                <FontAwesome6
-                    name="terminal"
-                    iconStyle="solid"
-                    size={18}
-                    color="#ffffff"
-                />
+                  <FontAwesome6
+                      name="terminal"
+                      iconStyle="solid"
+                      size={18}
+                      color="#ffffff"
+                  />
                 </View>
                 <Text style={{ fontSize: 20, fontWeight: "600" }}>
                 {tab.title}
