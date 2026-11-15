@@ -12,13 +12,26 @@ type IconName = Extract<
 type ChimpProps = {
   label: string;
   icon?: IconName;
+  color?: string;
+  bgColor?: string;
+  textColor?: string;
 };
 
-export function Chimp({ label, icon = "medal" }: ChimpProps) {
+export function Chimp({ label, icon, color, bgColor, textColor }: ChimpProps) {
   return (
-    <View className="flex-row items-center gap-1 self-start rounded-full bg-primary/10 px-3 py-1">
-      <FontAwesome6 name={icon} iconStyle="solid" size={12} color={colors.primary} />
-      <AppText variant="label" className="text-primary">
+    <View className="flex-row items-center gap-1 rounded-full" 
+      style={{
+        backgroundColor: bgColor || "rgba(70, 72, 212, 0.1)",
+        borderRadius: 999,
+        paddingHorizontal: 12,
+        paddingVertical: 4,
+      }}
+>
+
+      {icon ? (
+            <FontAwesome6 name={icon} iconStyle="solid" size={12} color={color || colors.primary} />
+      ) : null}
+      <AppText variant="label" className="text-primary" style={{ color: textColor || colors.primary }}>
         {label}
       </AppText>
     </View>
