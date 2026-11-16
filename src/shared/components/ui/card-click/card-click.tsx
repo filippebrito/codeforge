@@ -3,6 +3,12 @@ import { AppText } from "../app-text/app-text";
 import FontAwesome6 from "@react-native-vector-icons/fontawesome6";
 import { colors } from "@/shared/theme/colors";
 import { ProgressBar } from "../chart/progress-bar/progress-bar";
+import { ComponentProps } from "react";
+
+type IconName = Extract<
+  ComponentProps<typeof FontAwesome6>,
+  { iconStyle: "solid" }
+>["name"];
 
 export type CardClickProps = {
   icon: IconName;
