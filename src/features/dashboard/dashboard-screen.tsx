@@ -11,6 +11,7 @@ import { CardButton } from "@/shared/components/composite/card-button/card-butto
 import { Chimp } from "@/shared/components/ui/chimp/chimp";
 import { AppText } from "@/shared/components/ui/app-text/app-text";
 import { Button } from "@/shared/components/ui/button/button";
+import { WeeklyActivity } from "@/shared/components/composite/weekly-activity/weekly-activity";
 
 
 export function DashboardScreen() {
@@ -51,6 +52,8 @@ export function DashboardScreen() {
 
           }
         />
+
+        <WeeklyActivity />
     </Screen>
   );
 }
