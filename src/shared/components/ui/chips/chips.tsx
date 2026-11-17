@@ -9,7 +9,7 @@ type IconName = Extract<
   { iconStyle: "solid" }
 >["name"];
 
-type ChimpProps = {
+type ChipsProps = {
   label: string;
   icon?: IconName;
   color?: string;
@@ -17,7 +17,7 @@ type ChimpProps = {
   textColor?: string;
 };
 
-export function Chimp({ label, icon, color, bgColor, textColor }: ChimpProps) {
+export function Chips({ label, icon, color, bgColor, textColor }: ChipsProps) {
   return (
     <View className="flex-row items-center gap-1 rounded-full" 
       style={{

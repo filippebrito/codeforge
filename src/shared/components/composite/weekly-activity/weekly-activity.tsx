@@ -1,14 +1,15 @@
 import { View } from "react-native";
 import { AppText } from "../../ui/app-text/app-text";
-import { Chimp } from "../../ui/chimp/chimp";
+import { Chips } from "../../ui/chips/chips";
 import FontAwesome6 from "@react-native-vector-icons/fontawesome6";
 import { CircularStatus } from "../../ui/circular-status/circular-status";
+import { SectionAreaTitle } from "../../ui/section-area-title/section-area-title";
 
 
 export function WeeklyActivity() {
     return (
         <View className="mb-4 mx-4 pt-2">
-            <AppText variant="heading" className="mb-2">Atividade Semanal</AppText>
+            <SectionAreaTitle title="Atividade Semanal" />
             <View className="bg-cardBg rounded-lg p-4">
                 <View className="flex-row items-center justify-between mb-2">
                     <View className="flex-row items-center gap-2">
@@ -19,7 +20,7 @@ export function WeeklyActivity() {
                             / 3.000 XP
                         </AppText>
                     </View>
-                    <Chimp label="Meta 82%" bgColor="#C9FFE7" textColor="#006C49" />
+                    <Chips label="Meta 82%" bgColor="#C9FFE7" textColor="#006C49" />
                 </View>
                 <View className="flex-row items-center justify-between">
                     <CircularStatus status="completed" label="Seg" />

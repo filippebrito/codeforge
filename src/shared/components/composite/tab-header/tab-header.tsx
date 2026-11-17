@@ -1,22 +1,24 @@
 import { Text, View } from "react-native";
 import { AppText } from "../../ui/app-text/app-text";
-import { Chimp } from "../../ui/chimp/chimp";
+import { Chips } from "../../ui/chips/chips";
 import { MetricCard } from "../../ui/metric-card/metric-card";
 import FontAwesome6 from "@react-native-vector-icons/fontawesome6";
 import { ProgressRing } from "../../ui/chart/progress-ring/progress-ring";
 import { TrackList } from "../track-list/track-list";
+import { SectionAreaTitle } from "../../ui/section-area-title/section-area-title";
 
 export function TabHeader() {
 
     return (
         <View className="mb-4 mx-4 pt-6">
-            <View className="flex-row items-center justify-between">
-                <AppText variant="heading">Olá, Alex 👋</AppText>
-                <Chimp icon="medal" label="Nível 14" />
-            </View>
-            <AppText variant="body" className="mt-1">
-                Pronto para forjar novos caminhos?
-            </AppText>
+
+            <SectionAreaTitle 
+                title="Olá, Alex 👋" 
+                description="Pronto para forjar novos caminhos?" 
+                rightView={
+                    <Chips icon="medal" label="Nível 14" />
+                } 
+                />
 
 
             <View className="my-4 flex-row gap-3">
