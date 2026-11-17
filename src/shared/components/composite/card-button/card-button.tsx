@@ -1,13 +1,14 @@
 import { Pressable, View } from "react-native";
 import { AppText } from "../../ui/app-text/app-text";
-import { Chimp } from "../../ui/chimp/chimp";
+import { Chips } from "../../ui/chips/chips";
 import { ReactNode } from "react";
+import { SectionAreaTitle } from "../../ui/section-area-title/section-area-title";
 
 type CardButtonProps = {
   title: string;
   description: string;
   bgColor?: string;
-  chimp?: ReactNode;
+  chips?: ReactNode;
   cardTitle?: string;
   bottomLeft?: ReactNode;
   bottomRight?: ReactNode;
@@ -19,7 +20,7 @@ export function CardButton({
   title,
   description,
   bgColor,
-  chimp,
+  chips,
   cardTitle,
   bottomLeft,
   bottomRight,
@@ -29,18 +30,15 @@ export function CardButton({
     return (
         <View className="mb-4 mx-4 pt-2">
             {cardTitle ? (
-                <View className="mb-2 flex-row items-center justify-between">  
-                    <AppText variant="heading" className="mb-2">{cardTitle}</AppText>
-                    <Pressable onPress={() => {}}>
-                        <AppText variant="label" className="text-primary">
-                        Ver todos
-                        </AppText>
-                    </Pressable>
-                </View>
+                <SectionAreaTitle 
+                    title={cardTitle} 
+                    rightButtonLabel="Ver todos"
+                    onRightButtonPress={() => {console.log("Ver todas clicado")}} 
+                />
             ) : null}
             <View className="w-full rounded-2xl  p-4 shadow-sm" style={{ backgroundColor: bgColor || "white" }}>
                 <View className="flex-row items-center justify-between mb-2">
-                    {chimp}
+                    {chips}
                     <AppText variant="label" className="text-on-surface/60">
                         ~5 min
                     </AppText>
